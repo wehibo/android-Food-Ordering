@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class CartAdapter extends BaseAdapter {
 
     Context context;
     ArrayList<com.wehibo.ourfoodordering.Order> cartOrders;
+    EditText name;
 
     public CartAdapter(Context context, ArrayList<com.wehibo.ourfoodordering.Order> cartOrders) {
 
