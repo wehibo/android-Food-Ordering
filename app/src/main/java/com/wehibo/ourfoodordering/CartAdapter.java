@@ -48,9 +48,9 @@ public class CartAdapter extends BaseAdapter {
         TextView cartQuantity = v.findViewById(R.id.cart_quantity);
         cartQuantity.setText("" + cartOrders.get(position).getQuantity());
         TextView cartPrice = v.findViewById(R.id.cart_price);
-        cartPrice.setText(String.format("$%.2f", cartOrders.get(position).getItem().getPrice()));
+        cartPrice.setText(String.format("%.2f", cartOrders.get(position).getItem().getPrice()));
         TextView cartItemTotal = v.findViewById(R.id.cart_item_total);
-        cartItemTotal.setText(String.format("$%.2f", cartOrders.get(position).getQuantity() * cartOrders.get(position).getItem().getPrice()))
+        cartItemTotal.setText(String.format("%.2f", cartOrders.get(position).getQuantity() * cartOrders.get(position).getItem().getPrice()))
         ;
 
         return v;

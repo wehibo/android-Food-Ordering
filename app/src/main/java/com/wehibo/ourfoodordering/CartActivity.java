@@ -61,32 +61,32 @@ public class CartActivity extends AppCompatActivity {
                                          @Override
                                          public void onClick(View v) {
 
-                                             com.wehibo.ourfoodordering.ShoppingCart.total = 0.0;
-                                             com.wehibo.ourfoodordering.ShoppingCart.ordered_items = new int[16];
-                                             com.wehibo.ourfoodordering.ShoppingCart.orders = new ArrayList<>(Arrays.asList(
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(0), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(1), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(2), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(3), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(4), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(5), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(6), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(7), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(8), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(9), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(10), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(11), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(12), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(13), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(14), 0),
-                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(15), 0)
-                                             ));
-                                             recreate();
-                
-                                         }
+             com.wehibo.ourfoodordering.ShoppingCart.total = 0.0;
+             com.wehibo.ourfoodordering.ShoppingCart.ordered_items = new int[16];
+             com.wehibo.ourfoodordering.ShoppingCart.orders = new ArrayList<>(Arrays.asList(
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(0), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(1), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(2), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(3), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(4), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(5), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(6), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(7), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(8), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(9), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(10), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(11), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(12), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(13), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(14), 0),
+                     new com.wehibo.ourfoodordering.Order(Database.items.get(15), 0)
+             ));
+             recreate();
+
                                      }
-        );
-        
+                                 }
+    );
+
     }
     
     
