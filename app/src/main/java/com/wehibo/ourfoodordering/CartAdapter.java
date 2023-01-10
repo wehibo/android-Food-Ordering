@@ -11,9 +11,9 @@ import java.util.ArrayList;
 public class CartAdapter extends BaseAdapter {
 
     Context context;
-    ArrayList<Order> cartOrders;
+    ArrayList<com.example.myrestaurant.Order> cartOrders;
 
-    public CartAdapter(Context context, ArrayList<Order> cartOrders) {
+    public CartAdapter(Context context, ArrayList<com.example.myrestaurant.Order> cartOrders) {
 
         this.context = context;
         this.cartOrders = cartOrders;
