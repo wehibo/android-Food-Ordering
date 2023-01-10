@@ -32,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
             name = intent.getStringExtra("item_name");
         }
         
-        for(Item item : com.example.myrestaurant.Database.items) {
+        for(Item item : com.wehibo.ourfoodordering.Database.items) {
             if(item.getName().equals(name)) {
                 clicked_item = item;
             }

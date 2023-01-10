@@ -1,4 +1,4 @@
-package com.example.myrestaurant;
+package com.wehibo.ourfoodordering;
 
 public class Order {
     
