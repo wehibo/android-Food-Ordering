@@ -26,7 +26,7 @@ public class FoodListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food_list);
         
         
-        // get intent
+          // get intent
         
         Intent intent = getIntent();
         
@@ -63,7 +63,7 @@ public class FoodListActivity extends AppCompatActivity {
         
         listView = findViewById(R.id.food_list);
         
-        listView.setAdapter(new ItemAdapter(this, foodListItems));
+        listView.setAdapter(new com.example.myrestaurant.ItemAdapter(this, foodListItems));
         
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             
@@ -89,7 +89,7 @@ public class FoodListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //init intent, connect to cart activity
-                Intent intent = new Intent(getApplicationContext(), CartActivity.class);
+                Intent intent = new Intent(getApplicationContext(), com.example.myrestaurant.CartActivity.class);
                 
                 //start activity
                 startActivity(intent);
