@@ -1,4 +1,4 @@
-package com.example.myrestaurant;
+package com.wehibo.ourfoodordering;
 
 import android.content.Context;
 import android.view.View;

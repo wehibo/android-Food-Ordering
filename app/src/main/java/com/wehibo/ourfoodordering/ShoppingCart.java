@@ -1,4 +1,4 @@
-package com.example.myrestaurant;
+package com.wehibo.ourfoodordering;
 
 import java.util.ArrayList;
 import java.util.Arrays;
