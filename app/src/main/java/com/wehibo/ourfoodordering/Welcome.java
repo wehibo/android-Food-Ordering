@@ -23,8 +23,8 @@ public class Welcome extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Welcome.this,Registeration.class);
-                startActivity(intent);
+//                Intent intent= new Intent(Welcome.this,Registeration.class);
+//                startActivity(intent);
 
             }
         });
@@ -32,8 +32,8 @@ public class Welcome extends AppCompatActivity {
         Signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Welcome.this,Login.class);
-                startActivity(intent);
+//                Intent intent= new Intent(Welcome.this,Login.class);
+//                startActivity(intent);
 
             }
         });
