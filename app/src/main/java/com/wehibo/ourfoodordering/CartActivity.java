@@ -21,6 +21,7 @@ public class CartActivity extends AppCompatActivity {
     TextView cartTotal;
     EditText name;
     
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         
