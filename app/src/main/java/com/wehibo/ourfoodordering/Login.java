@@ -40,24 +40,24 @@ public class Login extends AppCompatActivity {
             progressDialog.setMessage("please waitvalidation in progress ");
 
             binding.registerR.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!binding.emailR.getText().toString().isEmpty() && !binding.passwordR.getText().toString().isEmpty()) {
-                        progressDialog.show();
-                        mAuth.signInWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
-                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        progressDialog.dismiss();
-                                        if (task.isSuccessful()) {
-                                            Intent intent = new Intent(Login.this, MainActivity.class);
-                                            startActivity(intent);
+    @Override
+    public void onClick(View view) {
+    if (!binding.emailR.getText().toString().isEmpty() && !binding.passwordR.getText().toString().isEmpty()) {
+        progressDialog.show();
+        mAuth.signInWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
+    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        @Override
+        public void onComplete(@NonNull Task<AuthResult> task) {
+            progressDialog.dismiss();
+            if (task.isSuccessful()) {
+                Intent intent = new Intent(Login.this, MainActivity.class);
+                startActivity(intent);
 
-                                        } else {
-                                            Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                        }
-                                    }
-                                });
+            } else {
+                Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+            }
+                        }
+                    });
                     } else {
                         Toast.makeText(Login.this, "Enter the empty field ", Toast.LENGTH_SHORT).show();
                     }
