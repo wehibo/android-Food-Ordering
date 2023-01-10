@@ -46,7 +46,7 @@ public class DetailActivity extends AppCompatActivity {
         detail_image.setImageResource(clicked_item.getImageID());
         detail_title.setText(clicked_item.getName());
         detail_description.setText(clicked_item.getDescription());
-        detail_price.setText("$" + clicked_item.getPrice());
+        detail_price.setText(" " + clicked_item.getPrice());
         
         EditText detail_quantity = findViewById(R.id.detail_quantity);
         

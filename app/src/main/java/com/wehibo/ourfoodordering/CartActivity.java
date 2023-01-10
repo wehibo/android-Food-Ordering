@@ -19,9 +19,7 @@ public class CartActivity extends AppCompatActivity {
     ArrayList<com.wehibo.ourfoodordering.Order> orders;
     Button clear_btn;
     TextView cartTotal;
-    EditText name;
-    
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         

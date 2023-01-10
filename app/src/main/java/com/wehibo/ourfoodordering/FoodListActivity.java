@@ -67,15 +67,15 @@ public class FoodListActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-                                            @Override
-                                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                                                Intent toDetail = new Intent(getApplicationContext(), DetailActivity.class);
-                                                toDetail.putExtra("item_name", foodListItems.get(position).getName());
-                                                startActivity(toDetail);
-                                            }
-                                        }
-        );
+                Intent toDetail = new Intent(getApplicationContext(), DetailActivity.class);
+                toDetail.putExtra("item_name", foodListItems.get(position).getName());
+                startActivity(toDetail);
+            }
+        }
+);
 
         // See cart Button
 
