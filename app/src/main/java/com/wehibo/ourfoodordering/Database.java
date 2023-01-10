@@ -7,10 +7,10 @@ public class Database {
     
     static ArrayList<Category> categories = new ArrayList<Category>(Arrays.asList(
 
-            new Category("Pasta", R.drawable.caesar),
-            new Category("Hamburger", R.drawable.grilled_chicken),
-            new Category("Sandwich", R.drawable.club),
-            new Category("Salad", R.drawable.caesar)
+            new Category("Pasta", R.drawable.pasta_injera),
+            new Category("Injera be Wot", R.drawable.grilled_chicken),
+            new Category("Vegetable-Firafire", R.drawable.club),
+            new Category("Meat-Siga", R.drawable.caesar)
 
 
     ));
