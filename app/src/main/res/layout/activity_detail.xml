@@ -32,8 +32,8 @@
 
         <TextView
             android:id="@+id/detail_description"
-            android:layout_width="355dp"
-            android:layout_height="122dp"
+            android:layout_width="354dp"
+            android:layout_height="91dp"
             android:layout_weight="1"
 
             android:text="asaa" />
@@ -53,13 +53,13 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="78dp"
-            android:layout_height="wrap_content"
+            android:layout_width="127dp"
+            android:layout_height="29dp"
             android:text="Quantity:" />
 
         <EditText
             android:id="@+id/detail_quantity"
-            android:layout_width="147dp"
+            android:layout_width="183dp"
             android:layout_height="wrap_content"
             android:hint="Enter Quantity"
             android:inputType="number" />
