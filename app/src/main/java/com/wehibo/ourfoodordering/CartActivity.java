@@ -1,9 +1,10 @@
-package com.example.myrestaurant;
+package com.wehibo.ourfoodordering;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class CartActivity extends AppCompatActivity {
     ArrayList<Order> orders;
     Button clear_btn;
     TextView cartTotal;
+    EditText name;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
