@@ -69,8 +69,8 @@ public class DetailActivity extends AppCompatActivity {
                     
                     // add item to shopping cart
 //                    Order order = new Order(clicked_item.getCategory(), clicked_item.getName(), clicked_item.getDescription(), clicked_item.getPrice(), clicked_item.getImageID(), quantity);
-                    com.example.myrestaurant.ShoppingCart.ordered_items[clicked_item.getItemID()] += quantity;
-                    com.example.myrestaurant.ShoppingCart.total += quantity * clicked_item.getPrice();
+                    com.wehibo.ourfoodordering.ShoppingCart.ordered_items[clicked_item.getItemID()] += quantity;
+                    com.wehibo.ourfoodordering.ShoppingCart.total += quantity * clicked_item.getPrice();
                     Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_LONG).show();
                     
                     //start foodlist activity
