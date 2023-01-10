@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class CartActivity extends AppCompatActivity {
     
     ListView listView;
-    ArrayList<com.example.myrestaurant.Order> orders;
+    ArrayList<com.wehibo.ourfoodordering.Order> orders;
     Button clear_btn;
     TextView cartTotal;
     EditText name;
@@ -35,19 +35,19 @@ public class CartActivity extends AppCompatActivity {
         
         listView = findViewById(R.id.shopping_cart_list);
         
-        orders = com.example.myrestaurant.ShoppingCart.orders;
+        orders = com.wehibo.ourfoodordering.ShoppingCart.orders;
         
-        for(int i = 0; i < com.example.myrestaurant.ShoppingCart.ordered_items.length; i++) {
-            if(com.example.myrestaurant.ShoppingCart.ordered_items[i] != 0) {
+        for(int i = 0; i < com.wehibo.ourfoodordering.ShoppingCart.ordered_items.length; i++) {
+            if(com.wehibo.ourfoodordering.ShoppingCart.ordered_items[i] != 0) {
                 
                 int itemID = i;
-                int quantity = com.example.myrestaurant.ShoppingCart.ordered_items[i];
+                int quantity = com.wehibo.ourfoodordering.ShoppingCart.ordered_items[i];
                 orders.get(i).setQuantity(quantity);
             }
         }
         
         cartTotal = findViewById(R.id.cart_total);
-        cartTotal.setText(String.format("%.2f", com.example.myrestaurant.ShoppingCart.total));
+        cartTotal.setText(String.format("%.2f", com.wehibo.ourfoodordering.ShoppingCart.total));
         
         listView.setAdapter(new CartAdapter(this, orders));
         
@@ -59,26 +59,26 @@ public class CartActivity extends AppCompatActivity {
             
                                          @Override
                                          public void onClick(View v) {
-                
-                                             com.example.myrestaurant.ShoppingCart.total = 0.0;
-                                             com.example.myrestaurant.ShoppingCart.ordered_items = new int[16];
-                                             com.example.myrestaurant.ShoppingCart.orders = new ArrayList<>(Arrays.asList(
-                                                     new com.example.myrestaurant.Order(Database.items.get(0), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(1), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(2), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(3), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(4), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(5), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(6), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(7), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(8), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(9), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(10), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(11), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(12), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(13), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(14), 0),
-                                                     new com.example.myrestaurant.Order(Database.items.get(15), 0)
+
+                                             com.wehibo.ourfoodordering.ShoppingCart.total = 0.0;
+                                             com.wehibo.ourfoodordering.ShoppingCart.ordered_items = new int[16];
+                                             com.wehibo.ourfoodordering.ShoppingCart.orders = new ArrayList<>(Arrays.asList(
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(0), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(1), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(2), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(3), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(4), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(5), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(6), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(7), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(8), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(9), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(10), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(11), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(12), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(13), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(14), 0),
+                                                     new com.wehibo.ourfoodordering.Order(Database.items.get(15), 0)
                                              ));
                                              recreate();
                 
