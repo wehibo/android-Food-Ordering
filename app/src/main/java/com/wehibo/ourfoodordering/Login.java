@@ -1,4 +1,4 @@
-package com.wehibo.ourfoodordering;
+package com.example.myrestaurant;
 
 
 import android.app.ProgressDialog;
@@ -21,7 +21,6 @@ public class Login extends AppCompatActivity {
 
 
         ActivityLoginBinding binding;
-        birra
 
         FirebaseAuth mAuth;
         FirebaseDatabase firebaseDatabase;
