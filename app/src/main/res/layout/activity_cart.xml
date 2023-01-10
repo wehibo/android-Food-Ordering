@@ -49,7 +49,7 @@
     <ListView
         android:id="@+id/shopping_cart_list"
         android:layout_width="match_parent"
-        android:layout_height="544dp"
+        android:layout_height="575dp"
         android:layout_weight="1" />
 
     <Button

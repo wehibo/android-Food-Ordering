@@ -1,8 +1,6 @@
 package com.wehibo.ourfoodordering;
 
-//TODO fix back button issues
-//TODO
-//TODO
+
 
 import android.content.Intent;
 import android.os.Bundle;

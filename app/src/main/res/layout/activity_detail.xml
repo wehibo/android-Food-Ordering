@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/detail_description_heading"
         android:layout_width="113dp"
-        android:layout_height="55dp"
+        android:layout_height="61dp"
         android:text="Description"
         android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
         <TextView
             android:id="@+id/detail_description"
             android:layout_width="355dp"
-            android:layout_height="match_parent"
+            android:layout_height="46dp"
             android:layout_weight="1"
 
             android:text="asaa" />
@@ -60,7 +60,7 @@
         <EditText
             android:id="@+id/detail_quantity"
             android:layout_width="147dp"
-            android:layout_height="72dp"
+            android:layout_height="82dp"
             android:hint="Enter Quantity"
             android:inputType="number" />
     </LinearLayout>
@@ -68,7 +68,7 @@
     <Button
         android:id="@+id/add_btn"
         android:layout_width="163dp"
-        android:layout_height="wrap_content"
+        android:layout_height="83dp"
         android:background="#FFC107"
         android:text="ADD THIS ITEM"
         android:textStyle="bold" />
