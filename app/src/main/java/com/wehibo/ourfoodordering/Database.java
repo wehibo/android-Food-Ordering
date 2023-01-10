@@ -31,6 +31,7 @@ public class Database {
 //            new Item("Sandwich", "Sub", "All-dressed sub with ranch sauce.", 10.99, R.drawable.cheese, 13),
 //            new Item("Sandwich", "Smoked Meat", "House smoked meat with rye bread, dijon mustard and homemade pickles.", 10.99, R.drawable.cheese, 14),
 //            new Item("Sandwich", "Club", "Fresh bread with bacon, turkey, lettuce and mayo.", 8.99, R.drawable.club, 15)
+
             new Item("Injera", "Beyaynet", "Delicious grilled chicken with lettuce and tomato.", 13.99, R.drawable.injera_beyaynet, 0),
             new Item("Injera", "Shiro Wot", "Bacon, lettuce and tomato classic.", 12.99, R.drawable.injera_shirowot, 1),
             new Item("Injera", "Kik Wot", "Grass fed grilled ground pork with bbq sauce and onions.", 16.99, R.drawable.injera_kikwot, 2),
