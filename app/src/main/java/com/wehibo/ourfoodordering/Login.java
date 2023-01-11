@@ -1,4 +1,4 @@
-package com.example.myrestaurant;
+package com.wehibo.ourfoodordering;
 
 
 import android.app.ProgressDialog;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myrestaurant.databinding.ActivityLoginBinding;
+import com.wehibo.ourfoodordering.databinding.ActivityLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -40,24 +40,24 @@ public class Login extends AppCompatActivity {
             progressDialog.setMessage("please waitvalidation in progress ");
 
             binding.registerR.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!binding.emailR.getText().toString().isEmpty() && !binding.passwordR.getText().toString().isEmpty()) {
-                        progressDialog.show();
-                        mAuth.signInWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
-                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        progressDialog.dismiss();
-                                        if (task.isSuccessful()) {
-                                            Intent intent = new Intent(Login.this, MainActivity.class);
-                                            startActivity(intent);
+    @Override
+    public void onClick(View view) {
+    if (!binding.emailR.getText().toString().isEmpty() && !binding.passwordR.getText().toString().isEmpty()) {
+        progressDialog.show();
+        mAuth.signInWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
+    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        @Override
+        public void onComplete(@NonNull Task<AuthResult> task) {
+            progressDialog.dismiss();
+            if (task.isSuccessful()) {
+                Intent intent = new Intent(Login.this, MainActivity.class);
+                startActivity(intent);
 
-                                        } else {
-                                            Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                        }
-                                    }
-                                });
+            } else {
+                Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+            }
+                        }
+                    });
                     } else {
                         Toast.makeText(Login.this, "Enter the empty field ", Toast.LENGTH_SHORT).show();
                     }

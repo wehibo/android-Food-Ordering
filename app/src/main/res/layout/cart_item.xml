@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#886565"
+    android:theme="@style/DarkTheme">
+
+    <TextView
+        android:id="@+id/cart_name"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_weight="2"
+        android:background="#F44336"
+        android:text="beef" />
+
+    <TextView
+        android:id="@+id/cart_quantity"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_weight="1"
+        android:background="#F44336"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/cart_price"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_weight="1"
+        android:background="#F44336"
+        android:text="$35.99" />
+
+    <TextView
+        android:id="@+id/cart_item_total"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_weight="1.5"
+        android:background="#F44336"
+        android:text="35.99" />
+</LinearLayout>

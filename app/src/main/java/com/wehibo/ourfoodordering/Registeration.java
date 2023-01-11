@@ -9,8 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myrestaurant.databinding.ActivityRegisterationBinding;
-import com.example.myrestaurant.wehib.users;
+import com.wehibo.ourfoodordering.databinding.ActivityRegisterationBinding;
+import com.wehibo.ourfoodordering.wehib.users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -46,25 +46,25 @@ public class Registeration extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if (!binding.nameR.getText().toString().isEmpty() && !binding.emailR.getText().toString().isEmpty() && !binding.nameR.getText().toString().isEmpty()) {
-                    progressDialog.show();
-                    mAuth.createUserWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    progressDialog.dismiss();
-                                    if (task.isSuccessful()) {
-                                        users use=new users(binding.nameR.getText().toString(),binding.emailR.getText().toString(),binding.passwordR.getText().toString());
-                                        String id=task.getResult().getUser().getUid();
-                                        database.getReference().child("users").child(id).setValue(use);
-                                        Toast.makeText(Registeration.this, "SingUp successfuly", Toast.LENGTH_SHORT).show();
+        if (!binding.nameR.getText().toString().isEmpty() && !binding.emailR.getText().toString().isEmpty() && !binding.nameR.getText().toString().isEmpty()) {
+            progressDialog.show();
+            mAuth.createUserWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
+        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+            progressDialog.dismiss();
+            if (task.isSuccessful()) {
+                users use=new users(binding.nameR.getText().toString(),binding.emailR.getText().toString(),binding.passwordR.getText().toString());
+                String id=task.getResult().getUser().getUid();
+                database.getReference().child("users").child(id).setValue(use);
+                Toast.makeText(Registeration.this, "SingUp successfuly", Toast.LENGTH_SHORT).show();
 
-                                    } else {
-                                        Toast.makeText(Registeration.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                }
+            } else {
+                Toast.makeText(Registeration.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+            }
+            }
+        });
+        }
                 else{
                     Toast.makeText(Registeration.this, "Enter Credentials", Toast.LENGTH_SHORT).show();
                 }

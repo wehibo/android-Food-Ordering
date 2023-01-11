@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
             name = intent.getStringExtra("item_name");
         }
         
-        for(Item item : com.example.myrestaurant.Database.items) {
+        for(Item item : com.wehibo.ourfoodordering.Database.items) {
             if(item.getName().equals(name)) {
                 clicked_item = item;
             }
@@ -45,7 +46,7 @@ public class DetailActivity extends AppCompatActivity {
         detail_image.setImageResource(clicked_item.getImageID());
         detail_title.setText(clicked_item.getName());
         detail_description.setText(clicked_item.getDescription());
-        detail_price.setText("$" + clicked_item.getPrice());
+        detail_price.setText(" " + clicked_item.getPrice());
         
         EditText detail_quantity = findViewById(R.id.detail_quantity);
         
@@ -68,8 +69,8 @@ public class DetailActivity extends AppCompatActivity {
                     
                     // add item to shopping cart
 //                    Order order = new Order(clicked_item.getCategory(), clicked_item.getName(), clicked_item.getDescription(), clicked_item.getPrice(), clicked_item.getImageID(), quantity);
-                    com.example.myrestaurant.ShoppingCart.ordered_items[clicked_item.getItemID()] += quantity;
-                    com.example.myrestaurant.ShoppingCart.total += quantity * clicked_item.getPrice();
+                    com.wehibo.ourfoodordering.ShoppingCart.ordered_items[clicked_item.getItemID()] += quantity;
+                    com.wehibo.ourfoodordering.ShoppingCart.total += quantity * clicked_item.getPrice();
                     Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_LONG).show();
                     
                     //start foodlist activity

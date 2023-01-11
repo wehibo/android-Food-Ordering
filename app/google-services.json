@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641232193902",
+    "project_id": "ourfoodordering",
+    "storage_bucket": "ourfoodordering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641232193902:android:d81408bc1abe4964d5597f",
+        "android_client_info": {
+          "package_name": "com.wehibo.ourfoodordering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641232193902-ni1b9oe387iho8jnviq78sjcvn53eanf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ3QFtpkpoenANKxpfoKXjAiuGTHPdpug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641232193902-ni1b9oe387iho8jnviq78sjcvn53eanf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
