@@ -46,7 +46,7 @@ public class Registeration extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-        if (!binding.nameR.getText().toString().isEmpty() && !binding.emailR.getText().toString().isEmpty() && !binding.nameR.getText().toString().isEmpty()) {
+        if (!binding.nameR.getText().toString().isEmpty() && !binding.emailR.getText().toString().isEmpty() && !binding.passwordR.getText().toString().isEmpty()) {
             progressDialog.show();
             mAuth.createUserWithEmailAndPassword(binding.emailR.getText().toString(), binding.passwordR.getText().toString())
         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {

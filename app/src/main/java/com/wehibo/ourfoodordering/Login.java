@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
 
             progressDialog = new ProgressDialog(Login.this);
             progressDialog.setTitle("login");
-            progressDialog.setMessage("please waitvalidation in progress ");
+            progressDialog.setMessage("please Wait Validation in progress ");
 
             binding.registerR.setOnClickListener(new View.OnClickListener() {
     @Override
