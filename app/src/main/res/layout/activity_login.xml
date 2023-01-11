@@ -118,20 +118,6 @@
         app:layout_constraintTop_toBottomOf="@+id/registerR"
         app:layout_constraintVertical_bias="0.344" />
 
-
-    <!--    <Button-->
-    <!--        android:id="@+id/btnlogin"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="login"-->
-    <!--        android:textSize="20sp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.833"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:layout_constraintVertical_bias="0.473" />-->
-
     <TextView
         android:id="@+id/signupR"
         android:layout_width="wrap_content"
@@ -147,18 +133,5 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/registerR"
         app:layout_constraintVertical_bias="0.285" />
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/Lsignup"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="292dp"-->
-    <!--        android:layout_marginTop="136dp"-->
-    <!--        android:text="SignUp"-->
-    <!--        android:textSize="20sp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:layout_constraintVertical_bias="0.929" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
