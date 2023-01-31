@@ -8,9 +8,9 @@ public class Database {
     static ArrayList<Category> categories = new ArrayList<Category>(Arrays.asList(
 
             new Category("Injera", R.drawable.injera_beyaynet),
-            new Category("Pasta", R.drawable.pasta_injera),
-            new Category("Meat", R.drawable.meat_tiresiga),
-            new Category("Vegetable", R.drawable.vegetable_papaya)
+            new Category("Pasta", R.drawable.pasta_siga),
+            new Category("Meat", R.drawable.meat_kitfo),
+            new Category("Vegetable", R.drawable.vegetable_orange)
 
 
 

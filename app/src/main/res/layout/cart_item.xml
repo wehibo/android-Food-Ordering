@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_weight="2"
-        android:background="#F44336"
+        android:background="#9E2424"
         android:text="beef" />
 
     <TextView
@@ -18,7 +18,7 @@
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_weight="1"
-        android:background="#F44336"
+        android:background="#0B0B0B"
         android:text="1" />
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_weight="1"
-        android:background="#F44336"
+        android:background="#000000"
         android:text="$35.99" />
 
     <TextView
@@ -34,6 +34,6 @@
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_weight="1.5"
-        android:background="#F44336"
+        android:background="#000000"
         android:text="35.99" />
 </LinearLayout>

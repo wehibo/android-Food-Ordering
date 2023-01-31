@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".DetailActivity">
 
     <ImageView
             android:id="@+id/detail_image"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
     <TextView
@@ -26,7 +27,7 @@
         android:textStyle="bold" />
 
     <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -42,19 +43,19 @@
             android:id="@+id/detail_price"
             android:layout_width="wrap_content"
 
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="12.55" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="56dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="127dp"
-            android:layout_height="29dp"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
             android:text="Quantity:" />
 
         <EditText
@@ -67,9 +68,23 @@
 
     <Button
         android:id="@+id/add_btn"
-        android:layout_width="163dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:background="#FFC107"
+        android:background="#E91E63"
         android:text="ADD THIS ITEM"
         android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/feedbackField"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:hint="                Write you Feedback here"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 </LinearLayout>

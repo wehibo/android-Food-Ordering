@@ -7,8 +7,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -35,6 +39,8 @@ public class FoodListActivity extends AppCompatActivity {
         if(intent.getStringExtra("category") != null) {
             category = intent.getStringExtra("category");
         }
+
+
 
 
 //        // intent from DetailActivity
@@ -91,8 +97,7 @@ public class FoodListActivity extends AppCompatActivity {
                 //init intent, connect to cart activity
                 Intent intent = new Intent(getApplicationContext(), com.wehibo.ourfoodordering.CartActivity.class);
 
-                //start activity
-                startActivity(intent);
+               startActivity(intent);
 
             }
         });

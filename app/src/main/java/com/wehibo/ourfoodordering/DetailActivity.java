@@ -3,6 +3,7 @@ package com.wehibo.ourfoodordering;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,16 +14,20 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class DetailActivity extends AppCompatActivity {
     
     String name;
     Item clicked_item;
     Button add_btn;
     SharedPreferences preferences;
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         
@@ -37,7 +42,24 @@ public class DetailActivity extends AppCompatActivity {
                 clicked_item = item;
             }
         }
-        
+
+        EditText feedbackField = (EditText) findViewById(R.id.feedbackField);
+        Button submitButton = (Button) findViewById(R.id.submitButton);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference feedbackRef = database.getReference("feedback");
+
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String feedback = feedbackField.getText().toString();
+                feedbackRef.push().setValue(feedback);
+                Toast.makeText(getApplicationContext(), "Feedback submitted!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
         ImageView detail_image = findViewById(R.id.detail_image);
         TextView detail_title = findViewById(R.id.detail_title);
         TextView detail_description = findViewById(R.id.detail_description);
@@ -49,39 +71,45 @@ public class DetailActivity extends AppCompatActivity {
         detail_price.setText(" " + clicked_item.getPrice());
         
         EditText detail_quantity = findViewById(R.id.detail_quantity);
-        
+
+
         add_btn = findViewById(R.id.add_btn);
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
                 int quantity = 0;
                 //check if quantity is empty
                 if(!detail_quantity.getText().toString().equals("")) {
-                    
-                    
+
+
                     //get quantity
                     quantity = Integer.parseInt(detail_quantity.getText().toString());
                     // calculate total and pass to foodlist total
                     Intent return_total = new Intent(getApplicationContext(), FoodListActivity.class);
 //                    return_total.putExtra("total", quantity * clicked_item.getPrice());
                     return_total.putExtra("category", clicked_item.getCategory());
-                    
+
                     // add item to shopping cart
 //                    Order order = new Order(clicked_item.getCategory(), clicked_item.getName(), clicked_item.getDescription(), clicked_item.getPrice(), clicked_item.getImageID(), quantity);
                     com.wehibo.ourfoodordering.ShoppingCart.ordered_items[clicked_item.getItemID()] += quantity;
                     com.wehibo.ourfoodordering.ShoppingCart.total += quantity * clicked_item.getPrice();
                     Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_LONG).show();
-                    
+
+//
+
                     //start foodlist activity
-                    
+
                     startActivity(return_total);
-                    
+
                 }
-                
-                
+
+
             }
         });
+
+
+
     }
     
 }

@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/main_image"
         android:layout_width="match_parent"
-        android:layout_height="326dp"
+        android:layout_height="249dp"
         android:layout_gravity="bottom"
         android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/main_title"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="top"
-        android:alpha="1"
-        android:background="#F44336"
-        android:breakStrategy="high_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom|clip_horizontal|left"
+        android:alpha=".9"
 
+        android:background="#C5A018"
+        android:breakStrategy="high_quality"
         android:fontFamily="cursive"
-        android:freezesText="false"
-        android:gravity="center_horizontal"
+        android:freezesText="true"
+        android:gravity="bottom|right"
         android:scrollHorizontally="false"
-        android:shadowColor="#FFDAE9"
+        android:shadowColor="#222222"
+        android:textAlignment="viewEnd"
         android:textAllCaps="true"
-        android:textColor="#000000"
-        android:textSize="34dp"
-        android:textStyle="normal|bold"
-        android:visibility="visible" />
+        android:textColor="#FC000000"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="visible"
+        app:autoSizeTextType="uniform" />
 
 </FrameLayout>
