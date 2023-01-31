@@ -45,7 +45,7 @@ public class CartActivity extends AppCompatActivity {
 
         
         listView = findViewById(R.id.shopping_cart_list);
-        feedbackRef.push().setValue(listView);
+       //
         
         orders = com.wehibo.ourfoodordering.ShoppingCart.orders;
         
@@ -62,7 +62,7 @@ public class CartActivity extends AppCompatActivity {
         cartTotal = findViewById(R.id.cart_total);
         cartTotal.setText(String.format("%.2f", com.wehibo.ourfoodordering.ShoppingCart.total));
 
-    //    feedbackRef.push().setValue(cartTotal);
+
 
         listView.setAdapter(new CartAdapter(this, orders));
 
@@ -75,11 +75,11 @@ public class CartActivity extends AppCompatActivity {
 
 
                 feedbackRef.push().setValue(orders);
-
+            //    feedbackRef.push().setValue(listView);
 
                 feedbackRef.push().setValue(ShoppingCart.total);
 
-                Toast.makeText(getApplicationContext(), "Feedback submitted!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "order submitted!", Toast.LENGTH_SHORT).show();
 
 
 //                ItemRef.push().setValue(cartTotal);
